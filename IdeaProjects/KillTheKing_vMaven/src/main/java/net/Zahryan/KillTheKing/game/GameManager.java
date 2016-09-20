@@ -25,21 +25,6 @@ public class GameManager {
     /*---Méthodes---*/
     public static void startGame(KillTheKing ktk){
         //Stockage des équipes dans des listes
-		/*ArrayList<IGPlayer> equipeBleue = new ArrayList<IGPlayer>();
-		ArrayList<IGPlayer> equipeRouge = new ArrayList<IGPlayer>();
-		for (Entry<UUID, IGPlayer> entry : ktk.playerData.entrySet()){
-			if(entry.getValue().getTeam() == "Rouge"){
-				equipeRouge.add(entry.getValue());
-			}else if(entry.getValue().getTeam() == "Bleu"){
-				equipeBleue.add(entry.getValue());
-			}else{
-				if(equipeRouge.size() < 10){
-					equipeRouge.add(entry.getValue());
-				}else{
-					equipeBleue.add(entry.getValue());
-				}
-			}
-		}*/
 
         for (Map.Entry<UUID, KTKPlayer> entry : ktk.playerData.entrySet()){
             if((!ktk.equipeBleue.contains(entry.getKey())) && (!ktk.equipeRouge.contains(entry.getKey()))){
